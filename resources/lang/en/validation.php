@@ -98,8 +98,33 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => '用户名不能为空',
+            'min' => '用户名不能少于3个字符',
+        ],
+        'phone' => [
+            'required' => '手机号不能为空',
+            'unique' => '手机号已经被注册',
+        ],
+        'password' => [
+            'required' => '密码不能为空',
+            'min' => '密码不能少于6个字符',
+            'confirmed' => '确认密码不一致'
+        ],
+        'password_confirmation' => [
+            'required' => '确认密码不能为空',
+            'min' => '确认密码不能少于6个字符',
+        ],
+        'title' => [
+            'required' => '标题不能为空',
+            'min' => '标题不能少于6个字符',
+        ],
+        'content' => [
+            'required' => '内容不能为空',
+            'min' => '内容不能少于10个字符',
+        ],
+        'diary_id' => [
+            'required' => '没有选定文章',
         ],
     ],
 

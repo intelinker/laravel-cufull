@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Shanghai',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +177,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+//
+        Collective\Html\HtmlServiceProvider::class,
+
+        //        MarkDown
+        YuanChao\Editor\EndaEditorServiceProvider::class,
     ],
 
     /*
@@ -225,6 +230,13 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+
+//        MarkDown editor
+        'EndaEditor' => 'YuanChao\Editor\Facade\EndaEditorFacade'
 
     ],
 

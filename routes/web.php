@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'DiaryController@index');
+Route::resource('diaries', 'DiaryController');
+Route::resource('comments', 'CommentController');
+Route::resource('util', 'UtilController');
+
+Route::get('/user/register', 'UsersController@register');
+Route::get('/user/login', 'UsersController@login');
+Route::post('/user/subregister', 'UsersController@store');
+Route::post('/user/sublogin', 'UsersController@signin');
+Route::get('/user/logout', 'UsersController@logout');

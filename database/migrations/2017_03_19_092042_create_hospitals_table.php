@@ -17,6 +17,7 @@ class CreateHospitalsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('description');
+            $table->string('avatar');
             $table->string('domain');
             $table->string('token');
             $table->string('level');
